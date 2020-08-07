@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   namespace :api do
     get "/flavors" => "flavors#index"
     get "/flavors/:id" => "flavors#show"
-    post "/flavors" => "flavors#create"    
+    post "/flavors" => "flavors#create"
+    patch "/flavors/:id" => "flavors#update"
+    delete "/flavors/:id" => "flavors#destroy"
   end
 
 end
